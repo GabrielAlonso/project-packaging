@@ -7,8 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'project-packaging';
+  transferency: any;
 
   transfer($event) {
-    console.log($event);
+    this.transferency = $event;
   }
 }
