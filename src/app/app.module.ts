@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { BankStatementComponent } from './bank-statement/bank-statement.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    newTransferComponent
+    newTransferComponent,
+    BankStatementComponent
   ],
   imports: [
     BrowserModule,
