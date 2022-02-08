@@ -16,5 +16,12 @@ export class newTransferComponent {
       valueTransfer: this.value_transfer,
       destinyTransfer: this.destiny_transfer,
     });
+
+    this.clearField();
+  }
+
+  clearField() {
+    this.value_transfer = null;
+    this.destiny_transfer = null;
   }
 }
