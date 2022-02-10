@@ -1,3 +1,4 @@
+import { Transfer } from './../models/transfer.model';
 import { TransferService } from './../services/transfer.service';
 import { Component, Input, OnInit } from '@angular/core';
 
@@ -12,6 +13,9 @@ export class BankStatementComponent implements OnInit {
   constructor(private service: TransferService) {}
 
   ngOnInit() {
-    this.transferencies = this.service.transfers;
+    this.service.allTransfer().subscribe((transferencies: Transfer[]) => {
+      console.table(transferencies);
+      this.transferencies = transferencies;
+    })
   }
 }

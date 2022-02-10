@@ -9,13 +9,13 @@
     <tbody *ngIf="transferencies?.length > 0; else listEmpty">
       <tr class="table-statm__line" *ngFor="let transferency of transferencies">
         <td class="table-statm__content">
-          {{ transferency?.dateTransfer | date: "short" }}
+          {{ transferency?.dateTransf | date: "short" }}
         </td>
         <td class="table-statm__content">
-          {{ transferency?.valueTransfer | currency }}
+          {{ transferency?.valueTransf | currency }}
         </td>
         <td class="table-statm__content">
-          {{ transferency?.destinyTransfer }}
+          {{ transferency?.destinyTransf }}
         </td>
       </tr>
     </tbody>
