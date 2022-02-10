@@ -8,10 +8,5 @@ import { TransferService } from './services/transfer.service';
 })
 export class AppComponent {
   title = 'project-packaging';
-
   constructor(private service: TransferService) {}
-
-  transfer($event) {
-    this.service.add($event);
-  }
 }

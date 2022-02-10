@@ -22,12 +22,12 @@ export class TransferService {
     return this.httpClient.get<Transfer[]>(this.url);
   }
 
-  add(transfer: any) {
+  add(transfer: Transfer): Observable<Transfer> {
     this.hydrate(transfer);
-    this.listTransfer.push(transfer);
+    return this.httpClient.post<Transfer>(this.url, transfer);
   }
 
   private hydrate(transfer: any) {
-    transfer.dateTransfer = new Date();
+    transfer.dateTransf = new Date();
   }
 }
