@@ -7,9 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'project-packaging';
-  transferency: any;
+  transferencies: any[] = [];
 
   transfer($event) {
-    this.transferency = $event;
+    console.log($event);
+    const tranferency = {...$event, dateTransfer: new Date()};
+    this.transferencies.push(tranferency);
   }
 }

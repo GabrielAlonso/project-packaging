@@ -1,2 +1,5 @@
-<p>Value: {{ transferency?.valueTransfer }}</p>
-<p>Destiny: {{ transferency?.destinyTransfer }}</p>
+<div *ngFor="let transferency of transferencies">
+  <p>Value: {{ transferency?.valueTransfer }}</p>
+  <p>Destiny: {{ transferency?.destinyTransfer }}</p>
+  <p>Destiny: {{ transferency?.dateTransfer }}</p>
+</div>
