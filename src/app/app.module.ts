@@ -18,7 +18,7 @@ registerLocaleData(localePt, 'pt');
     { provide: LOCALE_ID, useValue: 'pt' },
     {
       provide: DEFAULT_CURRENCY_CODE,
-      useValue: 'BRL',
+      useValue: 'EUR',
     },
   ],
   bootstrap: [AppComponent],

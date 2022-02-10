@@ -1,16 +1,26 @@
 <section class="container">
-  <h2 class="titulo">Transferências</h2>
-  <table class="tabela">
-    <thead class="tabela__cabecalho">
-      <th class="tabela__cabecalho__conteudo">Date</th>
-      <th class="tabela__cabecalho__conteudo">Value</th>
-      <th class="tabela__cabecalho__conteudo">Destiny</th>
+  <h2 class="title-statm">Transfers</h2>
+  <table class="table-statm">
+    <thead class="table-statm__head">
+      <th class="table-statm__head__content">Date</th>
+      <th class="table-statm__head__content">Value</th>
+      <th class="table-statm__head__content">Destiny</th>
     </thead>
-    <tbody>
-    <tr class="tabela__linha" *ngFor="let transferency of transferencies">
-      <td class="tabela__conteudo">{{ transferency?.dateTransfer | date: "short" }}</td>
-      <td class="tabela__conteudo">{{ transferency?.valueTransfer | currency }}</td>
-      <td class="tabela__conteudo">{{ transferency?.destinyTransfer }}</td>
-    </tr>
-  </tbody>
-</table>
+    <tbody *ngIf="transferencies?.length > 0; else listEmpty">
+      <tr class="table-statm__line" *ngFor="let transferency of transferencies">
+        <td class="table-statm__content">
+          {{ transferency?.dateTransfer | date: "short" }}
+        </td>
+        <td class="table-statm__content">
+          {{ transferency?.valueTransfer | currency }}
+        </td>
+        <td class="table-statm__content">
+          {{ transferency?.destinyTransfer }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ng-template #listEmpty>
+    <p class="message-table">No registered operation</p>
+  </ng-template>
+</section>

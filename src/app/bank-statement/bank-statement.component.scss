@@ -1,37 +1,44 @@
-.titulo {
+.title-statm {
   text-align: center;
   font-size: 24px;
   margin-bottom: 16px;
 }
 
-.tabela {
+.table-statm {
+  width: 100%;
   text-align: center;
   margin: 0 auto;
+  padding:10px;
+  border-radius: 5px;
   background-color: white;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 
-  &__cabecalho {
+  &__head {
     color: var(--primary);
 
-    &__conteudo {
+    &__content {
       padding: 10px;
       border-bottom: 2px solid green;
     }
   }
 
-  &__linha {
+  &__line {
     margin-bottom: 10px;
     border-radius: 4px;
 
     &:last-child {
-      .tabela__conteudo {
+      .table-statm__content {
         border-bottom: none;
       }
     }
   }
 
-  &__conteudo {
+  &__content {
     padding: 10px;
-    border-bottom: 1px solid var(--cinza-claro);
+    border-bottom: 1px solid var(--green-light);
   }
+}
+
+.message-table {
+  text-align: center;
 }
