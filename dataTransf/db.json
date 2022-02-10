@@ -1,0 +1,22 @@
+{
+  "transfers": [
+    {
+      "id": "1",
+      "valueTransf": 35,
+      "destinyTransf": "1212-1",
+      "dateTransf": "2020-11-04T16:30:10.710Z"
+    },
+    {
+      "id": "2",
+      "valueTransf": 40,
+      "destinyTransf": "1213-1",
+      "dateTransf": "2020-11-04T21:24:10.710Z"
+    },
+    {
+      "id": "3",
+      "valueTransf": 12.5,
+      "destinyTransf": "1214-1",
+      "dateTransf": "2020-11-05T21:14:10.710Z"
+    }
+  ]
+}
