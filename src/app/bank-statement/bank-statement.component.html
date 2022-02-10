@@ -1,5 +1,16 @@
-<div *ngFor="let transferency of transferencies">
-  <p>Value: {{ transferency?.valueTransfer }}</p>
-  <p>Destiny: {{ transferency?.destinyTransfer }}</p>
-  <p>Date: {{ transferency?.dateTransfer }}</p>
-</div>
+<section class="container">
+  <h2 class="titulo">Transferências</h2>
+  <table class="tabela">
+    <thead class="tabela__cabecalho">
+      <th class="tabela__cabecalho__conteudo">Date</th>
+      <th class="tabela__cabecalho__conteudo">Value</th>
+      <th class="tabela__cabecalho__conteudo">Destiny</th>
+    </thead>
+    <tbody>
+    <tr class="tabela__linha" *ngFor="let transferency of transferencies">
+      <td class="tabela__conteudo">{{ transferency?.dateTransfer | date: "short" }}</td>
+      <td class="tabela__conteudo">{{ transferency?.valueTransfer | currency }}</td>
+      <td class="tabela__conteudo">{{ transferency?.destinyTransfer }}</td>
+    </tr>
+  </tbody>
+</table>
