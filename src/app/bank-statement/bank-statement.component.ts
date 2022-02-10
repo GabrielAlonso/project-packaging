@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-bank-statement',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bank-statement.component.scss']
 })
 export class BankStatementComponent implements OnInit {
+
+  @Input() transferency: any;
 
   constructor() { }
 
