@@ -7,7 +7,7 @@ import { TransferService } from '../services/transfer.service';
   templateUrl: './new-transfer.component.html',
   styleUrls: ['./new-transfer.component.scss']
 })
-export class newTransferComponent {
+export class NewTransferComponent {
   @Output() toTransfer = new EventEmitter<any>();
 
   value_transfer: number;
