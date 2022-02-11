@@ -1,6 +1,7 @@
 import { Transfer } from './../models/transfer.model';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { TransferService } from '../services/transfer.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-transfer',
@@ -13,7 +14,7 @@ export class NewTransferComponent {
   value_transfer: number;
   destiny_transfer: number;
 
-  constructor(private service: TransferService) {}
+  constructor(private service: TransferService, private router: Router) {}
 
   transfer_value() {
     const valueEmit: Transfer = {
@@ -25,6 +26,7 @@ export class NewTransferComponent {
       result => {
         console.log(result);
         this.clearField();
+        this.router.navigateByUrl('bank-statement');
       },
       error => console.error(error)
     );
